@@ -1,0 +1,107 @@
+K 25
+svn:wc:ra_dav:version-url
+V 69
+/svn/furniturestore/!svn/ver/13/furniturestore/src/com/anchy/biz/impl
+END
+ThirdBizImpl.java
+K 25
+svn:wc:ra_dav:version-url
+V 87
+/svn/furniturestore/!svn/ver/15/furniturestore/src/com/anchy/biz/impl/ThirdBizImpl.java
+END
+BrandBizImpl.java
+K 25
+svn:wc:ra_dav:version-url
+V 87
+/svn/furniturestore/!svn/ver/17/furniturestore/src/com/anchy/biz/impl/BrandBizImpl.java
+END
+MaterialBizImpl.java
+K 25
+svn:wc:ra_dav:version-url
+V 90
+/svn/furniturestore/!svn/ver/17/furniturestore/src/com/anchy/biz/impl/MaterialBizImpl.java
+END
+CollectBizImpl.java
+K 25
+svn:wc:ra_dav:version-url
+V 89
+/svn/furniturestore/!svn/ver/19/furniturestore/src/com/anchy/biz/impl/CollectBizImpl.java
+END
+UserBizImpl.java
+K 25
+svn:wc:ra_dav:version-url
+V 86
+/svn/furniturestore/!svn/ver/19/furniturestore/src/com/anchy/biz/impl/UserBizImpl.java
+END
+OrderBizImpl.java
+K 25
+svn:wc:ra_dav:version-url
+V 87
+/svn/furniturestore/!svn/ver/19/furniturestore/src/com/anchy/biz/impl/OrderBizImpl.java
+END
+InitBizImpl.java
+K 25
+svn:wc:ra_dav:version-url
+V 85
+/svn/furniturestore/!svn/ver/3/furniturestore/src/com/anchy/biz/impl/InitBizImpl.java
+END
+FirstBizImpl.java
+K 25
+svn:wc:ra_dav:version-url
+V 87
+/svn/furniturestore/!svn/ver/11/furniturestore/src/com/anchy/biz/impl/FirstBizImpl.java
+END
+SlideBizImpl.java
+K 25
+svn:wc:ra_dav:version-url
+V 87
+/svn/furniturestore/!svn/ver/16/furniturestore/src/com/anchy/biz/impl/SlideBizImpl.java
+END
+StyleBizImpl.java
+K 25
+svn:wc:ra_dav:version-url
+V 87
+/svn/furniturestore/!svn/ver/17/furniturestore/src/com/anchy/biz/impl/StyleBizImpl.java
+END
+AddressBizImpl.java
+K 25
+svn:wc:ra_dav:version-url
+V 88
+/svn/furniturestore/!svn/ver/4/furniturestore/src/com/anchy/biz/impl/AddressBizImpl.java
+END
+SecondBizImpl.java
+K 25
+svn:wc:ra_dav:version-url
+V 88
+/svn/furniturestore/!svn/ver/11/furniturestore/src/com/anchy/biz/impl/SecondBizImpl.java
+END
+GoodsBizImpl.java
+K 25
+svn:wc:ra_dav:version-url
+V 87
+/svn/furniturestore/!svn/ver/19/furniturestore/src/com/anchy/biz/impl/GoodsBizImpl.java
+END
+TypeBizImpl.java
+K 25
+svn:wc:ra_dav:version-url
+V 86
+/svn/furniturestore/!svn/ver/16/furniturestore/src/com/anchy/biz/impl/TypeBizImpl.java
+END
+SellerBizImpl.java
+K 25
+svn:wc:ra_dav:version-url
+V 88
+/svn/furniturestore/!svn/ver/17/furniturestore/src/com/anchy/biz/impl/SellerBizImpl.java
+END
+CartBizImpl.java
+K 25
+svn:wc:ra_dav:version-url
+V 86
+/svn/furniturestore/!svn/ver/19/furniturestore/src/com/anchy/biz/impl/CartBizImpl.java
+END
+ComBizImpl.java
+K 25
+svn:wc:ra_dav:version-url
+V 85
+/svn/furniturestore/!svn/ver/16/furniturestore/src/com/anchy/biz/impl/ComBizImpl.java
+END

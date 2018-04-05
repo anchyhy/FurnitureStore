@@ -1,0 +1,430 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE struts PUBLIC
+	"-//Apache Software Foundation//DTD Struts Configuration 2.3//EN"
+	"http://struts.apache.org/dtds/struts-2.3.dtd">
+
+<struts>
+
+	<package name="InitShow" namespace="/" extends="struts-default">
+		<action name="init" class="com.anchy.action.InitAction" method="init">
+			<result name="init">/index.jsp</result>
+		</action>
+	</package>
+
+
+	<package name="UserEntity" namespace="/" extends="struts-default">
+		<action name="indextologin" class="com.anchy.action.UserAction" method="indexToLogin">
+			<result name="indextologin">/login.jsp</result>
+		</action>
+		<action name="logintoaccount" class="com.anchy.action.UserAction" method="loginToAccount">
+			<result name="logintoaccount">/account.jsp</result>
+		</action>
+		<action name="logintoforgetpass" class="com.anchy.action.UserAction" method="loginToForgetpass">
+			<result name="logintoforgetpass">/forgetpass.jsp</result>
+		</action>
+		<action name="login" class="com.anchy.action.UserAction"
+			method="login">
+			<result name="logincontact" type="redirectAction">contact?uid=${uid }</result>
+			<result name="logincollect" type="redirectAction">getcollect?uid=${uid }</result>
+			<result name="loginorder" type="redirectAction">getorder?uid=${uid }</result>
+			<result name="loginaddress" type="redirectAction">getaddress?auid=${uid }</result>
+			<result name="logincart" type="redirectAction">getcart?uid=${uid }</result>
+			<result name="logingoods" type="redirectAction">single?gid=${gid }&amp;uid=${uid }</result>
+			<result name="logintrue1">/index.jsp</result>
+			<result name="logintrue2">/admin_index.jsp</result>
+			<result name="loginfalse">/login.jsp</result>
+		</action>
+		<action name="regist" class="com.anchy.action.UserAction"
+			method="regist">
+			<result name="registfalse">/account.jsp</result>
+			<result name="regist">/login.jsp</result>
+		</action>
+		<action name="activate" class="com.anchy.action.UserAction" method="activate">
+			<result name="activate">/login.jsp</result>
+			<result name="activatefalse">/account.jsp</result>
+		</action>
+		<action name="logout" class="com.anchy.action.UserAction"
+			method="logout">
+			<result name="logout" type="redirectAction">init</result>
+		</action>
+		<action name="chginfo" class="com.anchy.action.UserAction"
+			method="chgInfo">
+			<result name="chginfo" type="redirectAction">userinfo</result>
+			<result name="false">/chginfo.jsp</result>
+		</action>
+		<action name="chgpass" class="com.anchy.action.UserAction"
+			method="chgPass">
+			<result name="chgpass" type="redirectAction">userinfo</result>
+			<result name="false">/chgpassword.jsp</result>
+		</action>
+		<action name="userinfo" class="com.anchy.action.UserAction"
+			method="userInfo">
+			<result name="userinfo">/userinfo.jsp</result>
+		</action>
+		<action name="forgetpass" class="com.anchy.action.UserAction" method="forgetPass">
+			<result name="false">/forgetpass.jsp</result>
+			<result name="forgetpass">/login.jsp</result>
+		</action>
+	</package>
+
+
+	<package name="GoodsEntity" namespace="/" extends="struts-default">
+		<action name="firstsearch" class="com.anchy.action.GoodsAction"
+			method="firstSearch">
+			<result name="firstsearch">/products.jsp</result>
+			<param name="pageSize">9</param>
+			<param name="pageNum">1</param>
+		</action>
+		<action name="discountsearch" class="com.anchy.action.GoodsAction" method="discountSearch">
+			<result name="discountsearch">/products.jsp</result>
+			<param name="pageSize">9</param>
+			<param name="pageNum">1</param>
+		</action>
+		<action name="brandsearch" class="com.anchy.action.GoodsAction" method="brandSearch">
+			<result name="brandsearch">/products.jsp</result>
+			<param name="pageSize">9</param>
+			<param name="pageNum">1</param>
+		</action>
+		<action name="stylesearch" class="com.anchy.action.GoodsAction" method="styleSearch">
+			<result name="stylesearch">/products.jsp</result>
+			<param name="pageSize">9</param>
+			<param name="pageNum">1</param>
+		</action>
+		<action name="materialsearch" class="com.anchy.action.GoodsAction" method="materialSearch">
+			<result name="materialsearch">/products.jsp</result>
+			<param name="pageSize">9</param>
+			<param name="pageNum">1</param>
+		</action>
+		<action name="single" class="com.anchy.action.GoodsAction"
+			method="single">
+			<result name="single">/single.jsp</result>
+		</action>
+		<action name="backsingle" class="com.anchy.action.GoodsAction"
+			method="backSingle">
+			<result name="backsingle">/single.jsp</result>
+		</action>
+		<action name="sellergoods" class="com.anchy.action.GoodsAction"
+			method="sellerGoods">
+			<result name="sellergoods">/seller_index.jsp</result>
+			<param name="pageSize">9</param>
+			<param name="pageNum">1</param>
+		</action>
+		<action name="sellerthird" class="com.anchy.action.GoodsAction"
+			method="sellerThird">
+			<result name="sellerthird">/seller_index.jsp</result>
+			<param name="pageSize">9</param>
+			<param name="pageNum">1</param>
+		</action>
+		<action name="selleraddgoods" class="com.anchy.action.GoodsAction"
+			method="sellerAddGoods">
+			<result name="selleraddgoods">/seller_addgoods.jsp</result>
+		</action>
+		<action name="seadgoods" class="com.anchy.action.GoodsAction"
+			method="seadGoods">
+			<result name="seadgoods">/seller_index.jsp</result>
+			<param name="pageSize">9</param>
+			<param name="pageNum">1</param>
+		</action>
+		<action name="sellersingle" class="com.anchy.action.GoodsAction"
+			method="sellerSingle">
+			<result name="sellersingle">/seller_single.jsp</result>
+		</action>
+		<action name="delsellerphoto" class="com.anchy.action.GoodsAction"
+			method="delSellerPhoto">
+			<result name="delsellerphoto">/seller_single.jsp</result>
+		</action>
+		<action name="chggoods" class="com.anchy.action.GoodsAction"
+			method="chgGoods">
+			<result name="chggoods">/seller_single.jsp</result>
+		</action>
+		<action name="addphoto" class="com.anchy.action.GoodsAction"
+			method="addPhoto">
+			<result name="addphoto">/seller_single.jsp</result>
+		</action>
+		<action name="sdelgoods" class="com.anchy.action.GoodsAction"
+			method="sdelGoods">
+			<result name="sdelgoods">/seller_index.jsp</result>
+			<param name="pageSize">9</param>
+			<param name="pageNum">1</param>
+		</action>
+		<action name="price" class="com.anchy.action.GoodsAction" method="price">
+			<result name="price">/products.jsp</result>
+			<param name="pageSize">9</param>
+			<param name="pageNum">1</param>
+		</action>
+		<action name="transport" class="com.anchy.action.GoodsAction" method="transport">
+			<result name="transport">/products.jsp</result>
+			<param name="pageSize">9</param>
+			<param name="pageNum">1</param>
+		</action>
+		<action name="checkgoods" class="com.anchy.action.GoodsAction" method="checkGoods">
+			<result name="checkgoods">/checkgoods.jsp</result>
+		</action>
+		<action name="agrgoods" class="com.anchy.action.GoodsAction" method="agrGoods">
+			<result name="agrgoods">/checkgoods.jsp</result>
+		</action>
+		<action name="disagrgoods" class="com.anchy.action.GoodsAction" method="disAgrGoods">
+			<result name="disagrgoods">/checkgoods.jsp</result>
+		</action>
+		<action name="getsdgoods" class="com.anchy.action.GoodsAction" method="getSDGoods">
+			<result name="getsdgoods">/seller_index.jsp</result>
+		</action>
+		<action name="getsrgoods" class="com.anchy.action.GoodsAction" method="getSRDoods">
+			<result name="getsrgoods">/seller_index.jsp</result>
+		</action>
+	</package>
+
+
+	<package name="CartEntity" namespace="/" extends="struts-default">
+		<action name="addcart" class="com.anchy.action.CartAction"
+			method="addCart">
+			<result name="addcart">/single.jsp</result>
+		</action>
+		<action name="getcart" class="com.anchy.action.CartAction"
+			method="getCart">
+			<result name="getcart">/cart.jsp</result>
+		</action>
+		<action name="reducequantity" class="com.anchy.action.CartAction" method="reduceQuantity">
+			<result name="reducequantity">/cart.jsp</result>
+		</action>
+		<action name="addquantity" class="com.anchy.action.CartAction" method="addQuantity">
+			<result name="addquantity">/cart.jsp</result>
+		</action>
+		<action name="delcart" class="com.anchy.action.CartAction" method="delCart">
+			<result name="delcart">/cart.jsp</result>
+		</action>
+	</package>
+
+
+
+	<package name="OrderEntity" namespace="/" extends="struts-default">
+		<action name="addorder" class="com.anchy.action.OrderAction"
+			method="addOrder">
+			<result name="addorder" type="redirectAction">init</result>
+		</action>
+		<action name="goorder" class="com.anchy.action.OrderAction"
+			method="goOrder">
+			<result name="goorder">/buy.jsp</result>
+			<result name="false">/single.jsp</result>
+		</action>
+		<action name="getorder" class="com.anchy.action.OrderAction"
+			method="getOrder">
+			<result name="getorder">/order.jsp</result>
+		</action>
+		<action name="getsorder" class="com.anchy.action.OrderAction"
+			method="getSOrder">
+			<result name="getsorder">/seller_dispatch.jsp</result>
+		</action>
+		<action name="sdispatch" class="com.anchy.action.OrderAction"
+			method="sDispatch">
+			<result name="sdispatch">/seller_dispatch.jsp</result>
+		</action>
+		<action name="checkorder" class="com.anchy.action.OrderAction" method="checkOrder">
+			<result name="checkorder">/checkorder.jsp</result>
+		</action>
+		<action name="agrorder" class="com.anchy.action.OrderAction" method="agrOrder">
+			<result name="agrorder">/checkorder.jsp</result>
+		</action>
+		<action name="carttoorder" class="com.anchy.action.OrderAction" method="cartToOrder">
+			<result name="carttoorder">/carttoorder.jsp</result>
+			<result name="false">/index.jsp</result>
+		</action>
+		<action name="addmoreorder" class="com.anchy.action.OrderAction" method="addMoreOrder">
+			<result name="addmoreorder" type="redirectAction">init</result>
+		</action>
+		<action name="revceiveorder" class="com.anchy.action.OrderAction" method="receiveOrder">
+			<result name="revceiveorder">/order.jsp</result>
+		</action>
+		<action name="evaluate" class="com.anchy.action.OrderAction" method="evaluate">
+			<result name="evaluate">/order.jsp</result>
+		</action>
+	</package>
+
+
+
+	<package name="AddressEntity" namespace="/" extends="struts-default">
+		<action name="getaddress" class="com.anchy.action.AddressAction"
+			method="getAddress">
+			<result name="getaddress">/address.jsp</result>
+		</action>
+		<action name="deladdress" class="com.anchy.action.AddressAction" method="delAddress">
+			<result name="deladdress">/address.jsp</result>
+		</action>
+		<action name="addaddress" class="com.anchy.action.AddressAction" method="addAddress">
+			<result name="addaddress">/address.jsp</result>
+		</action>
+	</package>
+
+
+
+	<package name="admin" namespace="/" extends="struts-default">
+		<action name="showuser" class="com.anchy.action.UserAction"
+			method="showUser">
+			<result name="showuser">/admin_user.jsp</result>
+			<param name="pageSize">10</param>
+			<param name="pageNum">1</param>
+		</action>
+		<action name="admincom" class="com.anchy.action.ComAction"
+			method="adminCom">
+			<result name="admincom">/admin_com.jsp</result>
+		</action>
+		<action name="answer" class="com.anchy.action.ComAction" method="answer">
+			<result name="answer">/admin_com.jsp</result>
+		</action>
+	</package>
+
+
+
+	<package name="FirstEntity" namespace="/" extends="struts-default">
+		<action name="showfirst" class="com.anchy.action.FirstAction"
+			method="showFirst">
+			<result name="showfirst">/admin_first.jsp</result>
+		</action>
+		<action name="addfirst" class="com.anchy.action.FirstAction"
+			method="addFirst">
+			<result name="addfirst">/admin_first.jsp</result>
+		</action>
+		<action name="delfirst" class="com.anchy.action.FirstAction"
+			method="delFirst">
+			<result name="delfirst">/admin_first.jsp</result>
+		</action>
+		<action name="chgfirst" class="com.anchy.action.FirstAction" method="chgFirst">
+			<result name="chgfirst">/admin_first.jsp</result>
+		</action>
+	</package>
+
+
+	<package name="SecondEntity" namespace="/" extends="struts-default">
+		<action name="showsecond" class="com.anchy.action.SecondAction"
+			method="showSecond">
+			<result name="showsecond">/admin_second.jsp</result>
+		</action>
+		<action name="addsecond" class="com.anchy.action.SecondAction"
+			method="addSecond">
+			<result name="addsecond">/admin_second.jsp</result>
+		</action>
+		<action name="delsecond" class="com.anchy.action.SecondAction" method="delSecond">
+			<result name="delsecond">/admin_second.jsp</result>
+		</action>
+		<action name="chgsecond" class="com.anchy.action.SecondAction" method="chgSecond">
+			<result name="chgsecond">/admin_second.jsp</result>
+		</action>
+	</package>
+
+
+	<package name="ThirdEntity" namespace="/" extends="struts-default">
+		<action name="showthird" class="com.anchy.action.ThirdAction"
+			method="showThird">
+			<result name="showthird">/admin_third.jsp</result>
+		</action>
+		<action name="addthird" class="com.anchy.action.ThirdAction"
+			method="addThird">
+			<result name="addthird">/admin_third.jsp</result>
+		</action>
+		<action name="delthird" class="com.anchy.action.ThirdAction"
+			method="delThird">
+			<result name="delthird">/admin_third.jsp</result>
+		</action>
+		<action name="chgthird" class="com.anchy.action.ThirdAction" method="chgThird">
+			<result name="chgthird">/admin_third.jsp</result>
+		</action>
+	</package>
+
+
+
+	<package name="SlideEntity" namespace="/" extends="struts-default">
+		<action name="showslide" class="com.anchy.action.InitAction"
+			method="showSlide">
+			<result name="showslide">/admin_slide.jsp</result>
+		</action>
+		<action name="addslide" class="com.anchy.action.InitAction" method="addSlide">
+			<result name="addslide" type="redirectAction">showslide</result>
+		</action>
+	</package>
+
+
+	<package name="SellerEntity" namespace="/" extends="struts-default">
+		<action name="sellerflag" class="com.anchy.action.SellerAction"
+			method="sellerFlag">
+			<result name="sellerflag">/beseller.jsp</result>
+		</action>
+		<action name="sellerupload" class="com.anchy.action.UploadAction"
+			method="sellerUpload">
+			<result name="sellerupload" type="redirectAction">userinfo</result>
+		</action>
+		<action name="checkseller" class="com.anchy.action.SellerAction"
+			method="checkSeller">
+			<result name="checkseller">/checkseller.jsp</result>
+		</action>
+		<action name="agrseller" class="com.anchy.action.SellerAction"
+			method="agrSeller">
+			<result name="agrseller">/checkseller.jsp</result>
+		</action>
+		<action name="disagrseller" class="com.anchy.action.SellerAction" method="disAgrSeller">
+			<result name="disagrseller">/checkseller.jsp</result>
+		</action>
+		<action name="reupdate" class="com.anchy.action.SellerAction" method="reUpdate">
+			<result name="reupdate">/beseller.jsp</result>
+		</action>
+	</package>
+
+	<package name="TypeEntity" namespace="/" extends="struts-default">
+		<action name="delsellertype" class="com.anchy.action.TypeAction"
+			method="delSellerType">
+			<result name="delsellertype">/seller_single.jsp</result>
+		</action>
+		<action name="chgtnum" class="com.anchy.action.TypeAction"
+			method="chgTNum">
+			<result name="chgtnum">/seller_single.jsp</result>
+		</action>
+		<action name="addtype" class="com.anchy.action.TypeAction"
+			method="addType">
+			<result name="addtype">/seller_single.jsp</result>
+		</action>
+	</package>
+
+	<package name="ComEntity" namespace="/" extends="struts-default">
+		<action name="contact" class="com.anchy.action.ComAction"
+			method="contact">
+			<result name="contact">/contact.jsp</result>
+		</action>
+		<action name="addcom" class="com.anchy.action.ComAction"
+			method="addCom">
+			<result name="addcom">/contact.jsp</result>
+		</action>
+		<action name="delcom" class="com.anchy.action.ComAction"
+			method="delCom">
+			<result name="delcom">/contact.jsp</result>
+		</action>
+	</package>
+	<package name="CollectEntity" namespace="/" extends="struts-default">
+		<action name="addcollect" class="com.anchy.action.CollectAction" method="addCollect">
+			<result name="addcollect">/collect.jsp</result>
+		</action>
+		<action name="delcollect" class="com.anchy.action.CollectAction" method="delCollect">
+			<result name="delcollect">/collect.jsp</result>
+		</action>
+		<action name="getcollect" class="com.anchy.action.CollectAction" method="getCollect">
+			<result name="getcollect">/collect.jsp</result>
+		</action>
+	</package>
+	<package name="NewsEntity" namespace="/" extends="struts-default">
+		<action name="about" class="com.anchy.action.NewsAction" method="about">
+			<result name="about">/about.jsp</result>
+		</action>
+		<action name="shownews" class="com.anchy.action.NewsAction" method="showNews">
+			<result name="shownews">/admin_news.jsp</result>
+		</action>
+		<action name="addnews" class="com.anchy.action.NewsAction" method="addNews">
+			<result name="addnews">/admin_news.jsp</result>
+		</action>
+		<action name="delnews" class="com.anchy.action.NewsAction" method="delNews">
+			<result name="delnews">/admin_news.jsp</result>
+		</action>
+		<action name="allnews" class="com.anchy.action.NewsAction" method="allNews">
+			<result name="allnews">/news.jsp</result>
+		</action>
+	</package>
+	
+
+</struts>

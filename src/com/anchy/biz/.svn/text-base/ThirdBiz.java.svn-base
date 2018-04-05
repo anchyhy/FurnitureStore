@@ -1,0 +1,14 @@
+package com.anchy.biz;
+
+import java.util.List;
+import java.util.Map;
+
+import com.anchy.po.Third;
+
+public interface ThirdBiz {
+	public Map<String,List<String>> getAllThird();
+	public void addThird(String tname,int tsid);
+	public void delThird(int tid);
+	public List<Third> getSThird(int uid);
+	public List<Third> getThird();
+}

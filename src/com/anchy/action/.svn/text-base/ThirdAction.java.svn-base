@@ -1,0 +1,62 @@
+package com.anchy.action;
+
+import java.util.List;
+import java.util.Map;
+
+import com.anchy.biz.ThirdBiz;
+import com.anchy.biz.impl.ThirdBizImpl;
+import com.anchy.po.Second;
+import com.opensymphony.xwork2.ActionContext;
+
+public class ThirdAction {
+	private int tid;
+	private String name;
+	private Second second;
+	private int sid;
+	private ThirdBiz thirdBiz=new ThirdBizImpl();
+	public int getTid() {
+		return tid;
+	}
+	public void setTid(int tid) {
+		this.tid = tid;
+	}
+	public String getName() {
+		return name;
+	}
+	public void setName(String name) {
+		this.name = name;
+	}
+	public Second getSecond() {
+		return second;
+	}
+	public void setSecond(Second second) {
+		this.second = second;
+	}
+	public int getSid() {
+		return sid;
+	}
+	public void setSid(int sid) {
+		this.sid = sid;
+	}
+	public String showThird(){
+		Map<String, Object> session=ActionContext.getContext().getSession();
+		Map<String,List<String>> thirdList=thirdBiz.getAllThird();
+		session.put("thirdList", thirdList);
+		return "showthird";
+	}
+	public String addThird(){
+		Map<String, Object> session=ActionContext.getContext().getSession();
+		thirdBiz.addThird(name, sid);
+		Map<String,List<String>> thirdList=thirdBiz.getAllThird();
+		session.put("thirdList", thirdList);
+		return "addthird";
+	}
+	public String delThird(){
+		Map<String, Object> session=ActionContext.getContext().getSession();
+		thirdBiz.delThird(tid);
+		System.out.println(tid);
+		Map<String,List<String>> thirdList=thirdBiz.getAllThird();
+		session.put("thirdList", thirdList);
+		return "delthird";
+	}
+}

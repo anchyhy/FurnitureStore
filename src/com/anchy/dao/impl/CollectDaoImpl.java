@@ -1,0 +1,66 @@
+package com.anchy.dao.impl;
+
+import java.sql.ResultSet;
+import java.sql.SQLException;
+import java.util.ArrayList;
+import java.util.List;
+
+import com.anchy.dao.CollectDao;
+import com.anchy.po.Collect;
+import com.anchy.po.Goods;
+import com.anchy.util.DBHelper;
+
+public class CollectDaoImpl implements CollectDao {
+	DBHelper db=new DBHelper();
+	ResultSet rs;
+	String sql;
+	//添加到我的收藏
+	@Override
+	public void addCollect(int uid, int gid) {
+		// TODO Auto-generated method stub
+		sql="insert into collect(cuid,cgid) values (?,?)";
+		db.execOthers(sql, new Object[]{uid,gid});
+	}
+	//获取用户的收藏
+	@Override
+	public List<Collect> getCollect(int uid) {
+		// TODO Auto-generated method stub
+		sql="select g.*,c.* from goods g join collect c on g.goodsid=c.cgid where cuid=?";
+		rs=db.execQuery(sql, new Object[]{uid});
+		List<Collect> collectList=new ArrayList<Collect>();
+		try {
+			while(rs.next()){
+				Collect c=new Collect();
+				Goods goods=new Goods();
+				goods.setGid(rs.getInt("goodsid"));
+				goods.setName(rs.getString("name"));
+				goods.setInfo(rs.getString("info"));
+				goods.setDetail(rs.getString("detail"));
+				goods.setBrand(rs.getString("brand"));
+				goods.setColor(rs.getString("color"));
+				goods.setMaterial(rs.getString("material"));
+				goods.setStyle(rs.getString("style"));
+				goods.setTransport(rs.getDouble("transport"));
+				goods.setOriprice(rs.getDouble("oriprice"));
+				goods.setPreprice(rs.getDouble("preprice"));
+				goods.setPhoto(rs.getString("photo"));
+				c.setCid(rs.getInt("collectid"));
+				c.setGoods(goods);
+				collectList.add(c);
+			}
+			return collectList;
+		} catch (SQLException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+		return null;
+	}
+	//删除用户的收藏
+	@Override
+	public void delCollect(int cid) {
+		// TODO Auto-generated method stub
+		sql="delete from collect where collectid=?";
+		db.execOthers(sql, new Object[]{cid});
+	}
+
+}

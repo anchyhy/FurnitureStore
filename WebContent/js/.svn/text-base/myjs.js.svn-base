@@ -1,0 +1,98 @@
+function showSecondWindow(){
+	var e=document.getElementById('firstid').value;
+	alert(e);
+		document.getElementById("fid").value=document.getElementById('firstid').value;
+    	document.getElementById('window_second').style.display='block';
+    	document.getElementById('fade').style.display='block';
+    }
+    function closeSecondWindow(){
+    	document.getElementById('window_second').style.display='none';
+    	document.getElementById('fade').style.display='none';
+    }
+function showThirdWindow(){
+	var e=document.getElementById('secondid').value;
+	alert(e);
+	document.getElementById('sid').value=e;
+    	document.getElementById('window_third').style.display='block';
+    	document.getElementById('fade').style.display='block';
+    }
+    function closeThirdWindow(){
+    	document.getElementById('window_third').style.display='none';
+    	document.getElementById('fade').style.display='none';
+    }
+function showTypeWindow(){
+	   
+    	document.getElementById('window_type').style.display='block';
+    	document.getElementById('fade').style.display='block';
+    }
+    function closeTypeWindow(){
+    	document.getElementById('window_type').style.display='none';
+    	document.getElementById('fade').style.display='none';
+    }
+    
+    function showPhotoWindow(){
+    	document.getElementById('window_photo').style.display='block';
+    	document.getElementById('fade').style.display='block';
+    }
+    function closePhotoWindow(){
+    	document.getElementById('window_photo').style.display='none';
+    	document.getElementById('fade').style.display='none';
+    }
+    
+    function showAnswerWindow(){
+    	document.getElementById("comid").value=document.getElementById('cid').value;
+    	document.getElementById('window_answer').style.display='block';
+    	document.getElementById('fade').style.display='block';
+    }
+    function closeAnswerWindow(){
+    	document.getElementById('window_answer').style.display='none';
+    	document.getElementById('fade').style.display='none';
+    }  
+    function showSlideWindow(){
+    	document.getElementById('window_slide').style.display='block';
+    	document.getElementById('fade').style.display='block';
+    }
+    function closeSlideWindow(){
+    	document.getElementById('window_slide').style.display='none';
+    	document.getElementById('fade').style.display='none';
+    } 
+    function pleaseLogin(){
+    	document.getElementById('window_login').style.display='block';
+    	document.getElementById('fade').style.display='block';
+    }
+    function closeLoginWindow(){
+    	document.getElementById('window_login').style.display='none';
+    	document.getElementById('fade').style.display='none';
+    } 
+    function disagreeGoodsWindow(){
+    	var e=document.getElementById('gid').value;
+    	alert(e);
+    	document.getElementById('goodsid').value=e;
+    	document.getElementById('window_goods').style.display='block';
+    	document.getElementById('fade').style.display='block';
+    }
+    function closedisagreeGoodsWindow(){
+    	document.getElementById('window_goods').style.display='none';
+    	document.getElementById('fade').style.display='none';
+    }
+    function disagreeSellerWindow(){
+    	var e=document.getElementById('sid').value;
+    	alert(e);
+    	document.getElementById('sellerid').value=e;
+    	document.getElementById('window_seller').style.display='block';
+    	document.getElementById('fade').style.display='block';
+    }
+    function closedisagreeSellerWindow(){
+    	document.getElementById('window_seller').style.display='none';
+    	document.getElementById('fade').style.display='none';
+    }
+    function Evaluate(){
+    	alert(document.getElementById('oid').value);
+    	document.getElementById("orderid").value=document.getElementById('oid').value;
+    	document.getElementById('window_evaluate').style.display='block';
+    	document.getElementById('fade').style.display='block';
+    }
+    function closeEvaluateWindow(){
+    	document.getElementById('window_evaluate').style.display='none';
+    	document.getElementById('fade').style.display='none';
+    } 

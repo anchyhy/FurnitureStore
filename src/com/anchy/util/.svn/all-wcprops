@@ -1,0 +1,47 @@
+K 25
+svn:wc:ra_dav:version-url
+V 64
+/svn/furniturestore/!svn/ver/3/furniturestore/src/com/anchy/util
+END
+ReadPropertity.java
+K 25
+svn:wc:ra_dav:version-url
+V 85
+/svn/furniturestore/!svn/ver/19/furniturestore/src/com/anchy/util/ReadPropertity.java
+END
+utils.properties
+K 25
+svn:wc:ra_dav:version-url
+V 82
+/svn/furniturestore/!svn/ver/18/furniturestore/src/com/anchy/util/utils.properties
+END
+DBHelper.java
+K 25
+svn:wc:ra_dav:version-url
+V 78
+/svn/furniturestore/!svn/ver/3/furniturestore/src/com/anchy/util/DBHelper.java
+END
+EmailHandle.java
+K 25
+svn:wc:ra_dav:version-url
+V 82
+/svn/furniturestore/!svn/ver/17/furniturestore/src/com/anchy/util/EmailHandle.java
+END
+SendEmail.java
+K 25
+svn:wc:ra_dav:version-url
+V 80
+/svn/furniturestore/!svn/ver/19/furniturestore/src/com/anchy/util/SendEmail.java
+END
+Config.java
+K 25
+svn:wc:ra_dav:version-url
+V 76
+/svn/furniturestore/!svn/ver/3/furniturestore/src/com/anchy/util/Config.java
+END
+dbconfigs.properties
+K 25
+svn:wc:ra_dav:version-url
+V 85
+/svn/furniturestore/!svn/ver/3/furniturestore/src/com/anchy/util/dbconfigs.properties
+END

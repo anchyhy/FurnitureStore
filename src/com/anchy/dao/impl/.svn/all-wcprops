@@ -1,0 +1,107 @@
+K 25
+svn:wc:ra_dav:version-url
+V 69
+/svn/furniturestore/!svn/ver/13/furniturestore/src/com/anchy/dao/impl
+END
+ThirdDaoImpl.java
+K 25
+svn:wc:ra_dav:version-url
+V 87
+/svn/furniturestore/!svn/ver/17/furniturestore/src/com/anchy/dao/impl/ThirdDaoImpl.java
+END
+BrandDaoImpl.java
+K 25
+svn:wc:ra_dav:version-url
+V 87
+/svn/furniturestore/!svn/ver/17/furniturestore/src/com/anchy/dao/impl/BrandDaoImpl.java
+END
+MaterialDaoImpl.java
+K 25
+svn:wc:ra_dav:version-url
+V 90
+/svn/furniturestore/!svn/ver/17/furniturestore/src/com/anchy/dao/impl/MaterialDaoImpl.java
+END
+CollectDaoImpl.java
+K 25
+svn:wc:ra_dav:version-url
+V 89
+/svn/furniturestore/!svn/ver/19/furniturestore/src/com/anchy/dao/impl/CollectDaoImpl.java
+END
+UserDaoImpl.java
+K 25
+svn:wc:ra_dav:version-url
+V 86
+/svn/furniturestore/!svn/ver/19/furniturestore/src/com/anchy/dao/impl/UserDaoImpl.java
+END
+OrderDaoImpl.java
+K 25
+svn:wc:ra_dav:version-url
+V 87
+/svn/furniturestore/!svn/ver/19/furniturestore/src/com/anchy/dao/impl/OrderDaoImpl.java
+END
+InitDaoImpl.java
+K 25
+svn:wc:ra_dav:version-url
+V 85
+/svn/furniturestore/!svn/ver/3/furniturestore/src/com/anchy/dao/impl/InitDaoImpl.java
+END
+FirstDaoImpl.java
+K 25
+svn:wc:ra_dav:version-url
+V 87
+/svn/furniturestore/!svn/ver/17/furniturestore/src/com/anchy/dao/impl/FirstDaoImpl.java
+END
+SlideDaoImpl.java
+K 25
+svn:wc:ra_dav:version-url
+V 87
+/svn/furniturestore/!svn/ver/16/furniturestore/src/com/anchy/dao/impl/SlideDaoImpl.java
+END
+StyleDaoImpl.java
+K 25
+svn:wc:ra_dav:version-url
+V 87
+/svn/furniturestore/!svn/ver/17/furniturestore/src/com/anchy/dao/impl/StyleDaoImpl.java
+END
+AddressDaoImpl.java
+K 25
+svn:wc:ra_dav:version-url
+V 88
+/svn/furniturestore/!svn/ver/4/furniturestore/src/com/anchy/dao/impl/AddressDaoImpl.java
+END
+SecondDaoImpl.java
+K 25
+svn:wc:ra_dav:version-url
+V 88
+/svn/furniturestore/!svn/ver/11/furniturestore/src/com/anchy/dao/impl/SecondDaoImpl.java
+END
+GoodsDaoImpl.java
+K 25
+svn:wc:ra_dav:version-url
+V 87
+/svn/furniturestore/!svn/ver/19/furniturestore/src/com/anchy/dao/impl/GoodsDaoImpl.java
+END
+TypeDaoImpl.java
+K 25
+svn:wc:ra_dav:version-url
+V 86
+/svn/furniturestore/!svn/ver/16/furniturestore/src/com/anchy/dao/impl/TypeDaoImpl.java
+END
+SellerDaoImpl.java
+K 25
+svn:wc:ra_dav:version-url
+V 88
+/svn/furniturestore/!svn/ver/17/furniturestore/src/com/anchy/dao/impl/SellerDaoImpl.java
+END
+CartDaoImpl.java
+K 25
+svn:wc:ra_dav:version-url
+V 86
+/svn/furniturestore/!svn/ver/19/furniturestore/src/com/anchy/dao/impl/CartDaoImpl.java
+END
+ComDaoImpl.java
+K 25
+svn:wc:ra_dav:version-url
+V 85
+/svn/furniturestore/!svn/ver/16/furniturestore/src/com/anchy/dao/impl/ComDaoImpl.java
+END

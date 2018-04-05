@@ -1,0 +1,66 @@
+package com.anchy.action;
+
+import java.util.List;
+import java.util.Map;
+
+import com.anchy.biz.SecondBiz;
+import com.anchy.biz.impl.SecondBizImpl;
+import com.anchy.po.First;
+import com.opensymphony.xwork2.ActionContext;
+
+public class SecondAction {
+	private int sid;
+	private String name;
+	private First first;
+	private int fid;
+	private SecondBiz secondBiz=new SecondBizImpl();
+	public int getSid() {
+		return sid;
+	}
+	public void setSid(int sid) {
+		this.sid = sid;
+	}
+	public String getName() {
+		return name;
+	}
+	public void setName(String name) {
+		this.name = name;
+	}
+	public First getFirst() {
+		return first;
+	}
+	public void setFirst(First first) {
+		this.first = first;
+	}
+	public int getFid() {
+		return fid;
+	}
+	public void setFid(int fid) {
+		this.fid = fid;
+	}
+	public SecondBiz getSecondBiz() {
+		return secondBiz;
+	}
+	public void setSecondBiz(SecondBiz secondBiz) {
+		this.secondBiz = secondBiz;
+	}
+	public String showSecond(){
+		Map<String, Object> session=ActionContext.getContext().getSession();
+		Map<String,List<String>> secondList=secondBiz.getAllSecond();
+		session.put("secondList", secondList);
+		return "showsecond";
+	}
+	public String addSecond(){
+		Map<String, Object> session=ActionContext.getContext().getSession();
+		System.out.println(name+fid);
+		secondBiz.addSecond(name, fid);
+		session.put("secondList", secondBiz.getAllSecond());
+		return "addsecond";
+	}
+	public String delSecond(){
+		Map<String, Object> session=ActionContext.getContext().getSession();
+		secondBiz.delSecond(sid);
+		session.put("secondList", secondBiz.getAllSecond());
+		return "delsecond";
+	}
+}

@@ -1,0 +1,95 @@
+K 25
+svn:wc:ra_dav:version-url
+V 67
+/svn/furniturestore/!svn/ver/13/furniturestore/src/com/anchy/action
+END
+TypeAction.java
+K 25
+svn:wc:ra_dav:version-url
+V 83
+/svn/furniturestore/!svn/ver/16/furniturestore/src/com/anchy/action/TypeAction.java
+END
+GoodsAction.java
+K 25
+svn:wc:ra_dav:version-url
+V 84
+/svn/furniturestore/!svn/ver/17/furniturestore/src/com/anchy/action/GoodsAction.java
+END
+AddressAction.java
+K 25
+svn:wc:ra_dav:version-url
+V 86
+/svn/furniturestore/!svn/ver/19/furniturestore/src/com/anchy/action/AddressAction.java
+END
+SecondAction.java
+K 25
+svn:wc:ra_dav:version-url
+V 85
+/svn/furniturestore/!svn/ver/17/furniturestore/src/com/anchy/action/SecondAction.java
+END
+InitAction.java
+K 25
+svn:wc:ra_dav:version-url
+V 83
+/svn/furniturestore/!svn/ver/19/furniturestore/src/com/anchy/action/InitAction.java
+END
+FirstAction.java
+K 25
+svn:wc:ra_dav:version-url
+V 84
+/svn/furniturestore/!svn/ver/11/furniturestore/src/com/anchy/action/FirstAction.java
+END
+OrderAction.java
+K 25
+svn:wc:ra_dav:version-url
+V 84
+/svn/furniturestore/!svn/ver/19/furniturestore/src/com/anchy/action/OrderAction.java
+END
+UserAction.java
+K 25
+svn:wc:ra_dav:version-url
+V 83
+/svn/furniturestore/!svn/ver/19/furniturestore/src/com/anchy/action/UserAction.java
+END
+CollectAction.java
+K 25
+svn:wc:ra_dav:version-url
+V 86
+/svn/furniturestore/!svn/ver/19/furniturestore/src/com/anchy/action/CollectAction.java
+END
+RegisterController.java
+K 25
+svn:wc:ra_dav:version-url
+V 91
+/svn/furniturestore/!svn/ver/19/furniturestore/src/com/anchy/action/RegisterController.java
+END
+ThirdAction.java
+K 25
+svn:wc:ra_dav:version-url
+V 84
+/svn/furniturestore/!svn/ver/17/furniturestore/src/com/anchy/action/ThirdAction.java
+END
+UploadAction.java
+K 25
+svn:wc:ra_dav:version-url
+V 85
+/svn/furniturestore/!svn/ver/16/furniturestore/src/com/anchy/action/UploadAction.java
+END
+ComAction.java
+K 25
+svn:wc:ra_dav:version-url
+V 82
+/svn/furniturestore/!svn/ver/16/furniturestore/src/com/anchy/action/ComAction.java
+END
+CartAction.java
+K 25
+svn:wc:ra_dav:version-url
+V 83
+/svn/furniturestore/!svn/ver/19/furniturestore/src/com/anchy/action/CartAction.java
+END
+SellerAction.java
+K 25
+svn:wc:ra_dav:version-url
+V 85
+/svn/furniturestore/!svn/ver/17/furniturestore/src/com/anchy/action/SellerAction.java
+END

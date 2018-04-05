@@ -1,0 +1,215 @@
+K 25
+svn:wc:ra_dav:version-url
+V 57
+/svn/furniturestore/!svn/ver/14/furniturestore/WebContent
+END
+login.jsp
+K 25
+svn:wc:ra_dav:version-url
+V 67
+/svn/furniturestore/!svn/ver/19/furniturestore/WebContent/login.jsp
+END
+collect.jsp
+K 25
+svn:wc:ra_dav:version-url
+V 69
+/svn/furniturestore/!svn/ver/19/furniturestore/WebContent/collect.jsp
+END
+account.jsp
+K 25
+svn:wc:ra_dav:version-url
+V 69
+/svn/furniturestore/!svn/ver/19/furniturestore/WebContent/account.jsp
+END
+address.jsp
+K 25
+svn:wc:ra_dav:version-url
+V 69
+/svn/furniturestore/!svn/ver/19/furniturestore/WebContent/address.jsp
+END
+furniturestore.sql
+K 25
+svn:wc:ra_dav:version-url
+V 76
+/svn/furniturestore/!svn/ver/20/furniturestore/WebContent/furniturestore.sql
+END
+init
+K 25
+svn:wc:ra_dav:version-url
+V 61
+/svn/furniturestore/!svn/ver/3/furniturestore/WebContent/init
+END
+admin_third.jsp
+K 25
+svn:wc:ra_dav:version-url
+V 73
+/svn/furniturestore/!svn/ver/17/furniturestore/WebContent/admin_third.jsp
+END
+userinfo.jsp
+K 25
+svn:wc:ra_dav:version-url
+V 70
+/svn/furniturestore/!svn/ver/19/furniturestore/WebContent/userinfo.jsp
+END
+seller_dispatch.jsp
+K 25
+svn:wc:ra_dav:version-url
+V 77
+/svn/furniturestore/!svn/ver/19/furniturestore/WebContent/seller_dispatch.jsp
+END
+admin_user.jsp
+K 25
+svn:wc:ra_dav:version-url
+V 72
+/svn/furniturestore/!svn/ver/17/furniturestore/WebContent/admin_user.jsp
+END
+chgpassword.jsp
+K 25
+svn:wc:ra_dav:version-url
+V 73
+/svn/furniturestore/!svn/ver/19/furniturestore/WebContent/chgpassword.jsp
+END
+forgetpass.jsp
+K 25
+svn:wc:ra_dav:version-url
+V 72
+/svn/furniturestore/!svn/ver/19/furniturestore/WebContent/forgetpass.jsp
+END
+admin_first.jsp
+K 25
+svn:wc:ra_dav:version-url
+V 73
+/svn/furniturestore/!svn/ver/17/furniturestore/WebContent/admin_first.jsp
+END
+admin_slide.jsp
+K 25
+svn:wc:ra_dav:version-url
+V 73
+/svn/furniturestore/!svn/ver/17/furniturestore/WebContent/admin_slide.jsp
+END
+beseller.jsp
+K 25
+svn:wc:ra_dav:version-url
+V 70
+/svn/furniturestore/!svn/ver/19/furniturestore/WebContent/beseller.jsp
+END
+buy.jsp
+K 25
+svn:wc:ra_dav:version-url
+V 65
+/svn/furniturestore/!svn/ver/19/furniturestore/WebContent/buy.jsp
+END
+checkorder.jsp
+K 25
+svn:wc:ra_dav:version-url
+V 72
+/svn/furniturestore/!svn/ver/17/furniturestore/WebContent/checkorder.jsp
+END
+checkseller.jsp
+K 25
+svn:wc:ra_dav:version-url
+V 73
+/svn/furniturestore/!svn/ver/17/furniturestore/WebContent/checkseller.jsp
+END
+terms.jsp
+K 25
+svn:wc:ra_dav:version-url
+V 67
+/svn/furniturestore/!svn/ver/19/furniturestore/WebContent/terms.jsp
+END
+single.jsp
+K 25
+svn:wc:ra_dav:version-url
+V 68
+/svn/furniturestore/!svn/ver/19/furniturestore/WebContent/single.jsp
+END
+seller_single.jsp
+K 25
+svn:wc:ra_dav:version-url
+V 75
+/svn/furniturestore/!svn/ver/19/furniturestore/WebContent/seller_single.jsp
+END
+about.jsp
+K 25
+svn:wc:ra_dav:version-url
+V 67
+/svn/furniturestore/!svn/ver/19/furniturestore/WebContent/about.jsp
+END
+order.jsp
+K 25
+svn:wc:ra_dav:version-url
+V 67
+/svn/furniturestore/!svn/ver/19/furniturestore/WebContent/order.jsp
+END
+checkgoods.jsp
+K 25
+svn:wc:ra_dav:version-url
+V 72
+/svn/furniturestore/!svn/ver/17/furniturestore/WebContent/checkgoods.jsp
+END
+chginfo.jsp
+K 25
+svn:wc:ra_dav:version-url
+V 69
+/svn/furniturestore/!svn/ver/19/furniturestore/WebContent/chginfo.jsp
+END
+admin_com.jsp
+K 25
+svn:wc:ra_dav:version-url
+V 71
+/svn/furniturestore/!svn/ver/17/furniturestore/WebContent/admin_com.jsp
+END
+index.jsp
+K 25
+svn:wc:ra_dav:version-url
+V 67
+/svn/furniturestore/!svn/ver/19/furniturestore/WebContent/index.jsp
+END
+seller_index.jsp
+K 25
+svn:wc:ra_dav:version-url
+V 74
+/svn/furniturestore/!svn/ver/19/furniturestore/WebContent/seller_index.jsp
+END
+carttoorder.jsp
+K 25
+svn:wc:ra_dav:version-url
+V 73
+/svn/furniturestore/!svn/ver/19/furniturestore/WebContent/carttoorder.jsp
+END
+seller_addgoods.jsp
+K 25
+svn:wc:ra_dav:version-url
+V 77
+/svn/furniturestore/!svn/ver/19/furniturestore/WebContent/seller_addgoods.jsp
+END
+cart.jsp
+K 25
+svn:wc:ra_dav:version-url
+V 66
+/svn/furniturestore/!svn/ver/19/furniturestore/WebContent/cart.jsp
+END
+contact.jsp
+K 25
+svn:wc:ra_dav:version-url
+V 69
+/svn/furniturestore/!svn/ver/19/furniturestore/WebContent/contact.jsp
+END
+admin_index.jsp
+K 25
+svn:wc:ra_dav:version-url
+V 73
+/svn/furniturestore/!svn/ver/19/furniturestore/WebContent/admin_index.jsp
+END
+products.jsp
+K 25
+svn:wc:ra_dav:version-url
+V 70
+/svn/furniturestore/!svn/ver/19/furniturestore/WebContent/products.jsp
+END
+admin_second.jsp
+K 25
+svn:wc:ra_dav:version-url
+V 74
+/svn/furniturestore/!svn/ver/17/furniturestore/WebContent/admin_second.jsp
+END

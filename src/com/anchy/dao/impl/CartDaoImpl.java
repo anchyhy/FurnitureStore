@@ -1,0 +1,217 @@
+package com.anchy.dao.impl;
+
+import java.sql.ResultSet;
+import java.sql.SQLException;
+import java.util.ArrayList;
+import java.util.List;
+
+import com.anchy.dao.CartDao;
+import com.anchy.po.Address;
+import com.anchy.po.Cart;
+import com.anchy.po.Goods;
+import com.anchy.po.Type;
+import com.anchy.po.User;
+import com.anchy.util.DBHelper;
+
+public class CartDaoImpl implements CartDao {
+	DBHelper db=new DBHelper();
+	//添加至购物车
+	@Override
+	public boolean addCart(int uid, int gid,String kind, int n) {
+		// TODO Auto-generated method stub
+		String sql="select number from type where tgid=? and kind=?";
+		ResultSet rs=db.execQuery(sql, new Object[]{gid,kind});
+		try {
+			if(rs.next()){
+				if(n>rs.getInt("number"))
+					return false;
+				else{
+					sql="select typeid from type where tgid=? and kind=?";
+					rs=db.execQuery(sql, new Object[]{gid,kind});
+					if(rs.next()){
+						int typeid=rs.getInt("typeid");
+						sql="insert into cart (cuid,ctid) values (?,?)";
+						int i=1;
+						for(i=1;i<=n;i++){
+							db.execOthers(sql, new Object[]{uid,typeid});
+						}
+					return true;
+					}
+				}
+			}
+		} catch (SQLException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+		return false;
+		
+		
+	}
+	//购物车金额总数
+	@Override
+	public double cSum(int cuid) {
+		// TODO Auto-generated method stub
+		String sql="select SUM( g.preprice) as sum from goods g join type t on goodsid=tgid join cart c on c.ctid=typeid where c.cuid=? ";
+		ResultSet rs=db.execQuery(sql, new Object[]{cuid});
+		try {
+			if(rs.next())
+				return rs.getDouble("sum");
+		} catch (SQLException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+		return 0;
+	}
+	//购物车件数
+	@Override
+	public int cCount(int cuid) {
+		// TODO Auto-generated method stub
+		String sql="select count(*) from cart where cuid=?";
+		ResultSet rs=db.execQuery(sql, new Object[]{cuid});
+		try {
+			if(rs.next())
+				return rs.getInt("count(*)");
+		} catch (SQLException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+		return 0;
+	}
+	//获取用户购物车
+	@Override
+	public List<Cart> getCartByUser(int uid) {
+		// TODO Auto-generated method stub
+		String sql="select c.*,g.goodsid, g.`name`,g.preprice,g.transport,t.typeid,t.kind,t.photo,count(*) as cartsum from goods g join type t on t.tgid=g.goodsid join cart c on c.ctid=t.typeid where cuid=? group by t.typeid";
+		ResultSet rs=db.execQuery(sql, new Object[]{uid});
+		List<Cart> cartList=new ArrayList<Cart>();
+		try {
+			while(rs.next()){
+				Cart cart=new Cart();
+				Goods goods=new Goods();
+				goods.setGid(rs.getInt("goodsid"));
+				goods.setName(rs.getString("name"));
+				goods.setPreprice(rs.getDouble("preprice"));
+				goods.setTransport(rs.getDouble("transport"));
+				
+				Type type=new Type();
+				type.setKind(rs.getString("kind"));
+				type.setPhoto(rs.getString("photo"));
+				type.setTid(rs.getInt("typeid"));
+				
+				cart.setCid(rs.getInt("cartid"));
+				cart.setCtid(rs.getInt("ctid"));
+				cart.setCartsum(rs.getInt("cartsum"));
+				cart.setType(type);
+				cart.setGoods(goods);
+				cartList.add(cart);
+			}
+			return cartList;
+		} catch (SQLException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+		return null;
+	}
+	@Override
+	public Cart getCartByUserAndType(int uid,int tid){
+		String sql="select c.*,g.goodsid, g.`name`,g.preprice,g.transport,g.info,t.typeid,t.kind,t.photo,u.nickname,u.truename,u.email,u.phone,count(*) as cartsum from goods g join type t on t.tgid=g.goodsid join cart c on c.ctid=t.typeid join user u on u.userid=g.guid where cuid=? and t.typeid=? group by t.typeid";
+		ResultSet rs=db.execQuery(sql, new Object[]{uid,tid});
+		try {
+			if(rs.next()){
+				Cart cart=new Cart();
+				User u=new User();
+				u.setEmail(rs.getString("email"));
+				u.setNickname(rs.getString("nickname"));
+				u.setPhone(rs.getString("phone"));
+				u.setTruename(rs.getString("truename"));
+				Goods goods=new Goods();
+				goods.setGid(rs.getInt("goodsid"));
+				goods.setName(rs.getString("name"));
+				goods.setPreprice(rs.getDouble("preprice"));
+				goods.setTransport(rs.getDouble("transport"));
+				goods.setInfo(rs.getString("info"));
+				goods.setUser(u);
+				
+				Type type=new Type();
+				type.setKind(rs.getString("kind"));
+				type.setPhoto(rs.getString("photo"));
+				type.setTid(rs.getInt("typeid"));
+				
+				cart.setCid(rs.getInt("cartid"));
+				cart.setCtid(rs.getInt("ctid"));
+				cart.setCartsum(rs.getInt("cartsum"));
+				cart.setType(type);
+				cart.setGoods(goods);
+				return cart;
+			}
+		} catch (SQLException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+		return null;
+	}
+	//删除购物车里的商品
+	@Override
+	public void delCart(int cid) {
+		// TODO Auto-generated method stub
+		String sql="delete from cart where cartid=?";
+		db.execOthers(sql, new Object[]{cid});
+	}
+	//降低数量
+	@Override
+	public int reduceQuantity(int uid, int tid) {
+		String sql="select * from cart where cuid=? and ctid=? limit 0,1";
+		ResultSet rs=db.execQuery(sql, new Object[]{uid,tid});
+		try {
+			if(rs.next()){
+				sql="delete from cart where cartid =?";
+				db.execOthers(sql, new Object[]{rs.getInt("cartid")});
+				return 1;
+			}
+		} catch (SQLException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+		// TODO Auto-generated method stub
+		return 0;
+	}
+	//
+	@Override
+	public int countByType(int uid, int tid) {
+		// TODO Auto-generated method stub
+		String sql="select count(*) as count from cart where cuid=? and ctid=?";
+		ResultSet rs=db.execQuery(sql, new Object[]{uid,tid});
+		try {
+			if(rs.next()){
+				return rs.getInt("count");
+			}
+		} catch (SQLException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+		return 0;
+	}
+	@Override
+	public int addQuantity(int uid, int tid) {
+		// TODO Auto-generated method stub
+		int c1=countByType(uid, tid);
+		String sql="select number from type where typeid=?";
+		ResultSet rs=db.execQuery(sql, new Object[]{tid});
+		try {
+			if(rs.next()){
+				if(c1+1<=rs.getInt("number")){
+					sql="insert into cart (cuid,ctid) values(?,?)";
+					db.execOthers(sql, new Object[]{uid,tid});
+					return 1;
+				}else {
+					return 0;
+				}
+			}
+		} catch (SQLException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+		return 0;
+	}
+
+}

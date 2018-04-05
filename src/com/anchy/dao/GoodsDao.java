@@ -1,0 +1,46 @@
+package com.anchy.dao;
+
+import java.util.List;
+
+import com.anchy.po.Goods;
+
+public interface GoodsDao {
+	public List<Goods> firstSearch(String keyword, int pageNum, int pageSize);
+	public List<Goods> searchByDiscount(String keyword,int pageNum,int pageSize,int d);
+	public List<Goods> searchByBrand(String keyword,int pageNum,int pageSize,int bid);
+	public List<Goods> searchByMaterial(String keyword,int pageNum,int pageSize,int mid);
+	public List<Goods> searchByStyle(String keyword,int pageNum,int pageSize,int sid);
+	public int[] getDiscount(String keyword);
+	public Goods getGoodsById(int gid);
+	public List<Goods> getSellerGoods(int uid,int pageNum, int pageSize);
+	public List<Goods> getDisAgrGoods(int uid);
+	public List<Goods> getSRGoods(int uid);
+	public List<Goods> getSellerThird(int uid,int gtid,int pageNum, int pageSize);
+	public void addGoods(String name, String info,String detail,int mid,String material,String color,int sid,String style,int bid,String brand,int uid,int thirdid,double preprice,String photo,double transport);
+	public void delPhoto(int gid,String pname);
+	public void addPhoto(int gid,String pname);
+	public void chgGoods(int gid,String info,String detail,String material,String color,String style,String brand,double preprice,double transport);
+	public boolean delGoods(int gid);
+	public List<Goods> getGoodsByPrice(double pricefrom,double priceto,String keyword, int pageNum, int pageSize );
+	public List<Goods> noTransport(String keyword, int pageNum, int pageSize);
+	
+	public List<Goods> getTop();
+	public List<Goods> getNew();
+	public List<Goods> getSpecial();
+	public List<Goods> getRecent(int uid);
+	
+	public List<Goods> checkGoods();
+	public void agrGoods(int gid);
+	public void disagrGoods(int gid,String message);
+	
+	public Goods getGoodsByType(int tid);
+	
+	public int getFirstSearchCount(String keyword);
+	public int getDiscountCount(String keyword,int d);
+	public int getStyleCount(String keyword,int s);
+	public int getBrandCount(String keyword,int b);
+	public int getMaterialCount(String keyword,int m);
+	public int getTransportCount(String keyword);
+	public int getPriceCount(String keyword,double pricefrom,double priceto);
+	
+}

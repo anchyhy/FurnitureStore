@@ -1,0 +1,59 @@
+<%@ page language="java" contentType="text/html; charset=UTF-8"
+    pageEncoding="UTF-8"%>
+<%@taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c" %>
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<title>商家联系</title>
+<!-- 弹出登录、注册和修改密码窗口 -->
+<LINK rel="stylesheet" href="css/mycss.css">
+<script type="text/javascript" src="js/myjs.js" charset="gbk"></script>
+
+<!-- 登录div -->
+<div id="window_answer" class="window">
+<div class="window_title">
+	<H2>回复</H2>
+	<a href = "javascript:void(0)" onclick = "closeAnswerWindow()"><SPAN class="window_close"></SPAN></a>
+</div>
+<div class="window_content">
+<form action="answer" method="post">
+	<table width="34%">
+		<tr>
+			<td><input id="comid" type="hidden" name="cid"></td>
+			<td width="68%" align="left"><textarea name="answer" placeholder="回复......"></textarea> </td>
+			<td width="68%" align="left"><input type="submit" value="回复"> </td>
+		</tr>
+	</table>
+	</form>
+</div>
+</div> 
+</head>
+<body>
+
+<div align="center" style="margin-top: 50px">
+<form method="post" id="fm1">
+	<table border="1">
+		<tr>
+		<td>短信id</td>
+		<td>用户昵称</td>
+		<td>主题</td>
+		<td>问题</td>
+		<td>操作</td>
+		</tr>
+		<c:forEach items="${acomList }" var="acom">
+		<tr>
+		<td><input type="hidden" value="${acom.cid }" id="cid"/>${acom.cid }</td>
+		<td>${acom.user.nickname }</td>
+		<td><c:if test="${acom.subject==null }">空</c:if><c:if test="${acom.subject!=null }">${acom.subject }</c:if></td>
+		<td>${acom.ask }</td>
+		<td><a href="javascript:void(0)" onclick="showAnswerWindow()"><SPAN></SPAN>回复</a></td>
+		</tr>
+		</c:forEach>
+	</table>
+</form>
+</div>
+</body>
+</html>
+</body>
+</html>

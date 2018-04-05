@@ -1,0 +1,25 @@
+.unread{
+    float: right;
+    background: #e74c3c;
+    width: 2em;
+    border-radius: 50%;
+    font-size: 0.75em;
+    line-height: 2;
+    text-align: center;
+    animation: notificationpulse 0.5s infinite;
+    -webkit-animation: notificationpulse 0.5s infinite;
+    -moz-animation: notificationpulse 0.5s infinite;
+}
+
+.delet{
+    float: right;
+    background: #FFFFFF;
+    width: 2em;
+    border-radius: 50%;
+    font-size: 0.75em;
+    line-height: 2;
+    text-align: center;
+    animation: notificationpulse 0.5s infinite;
+    -webkit-animation: notificationpulse 0.5s infinite;
+    -moz-animation: notificationpulse 0.5s infinite;
+}
